@@ -1,7 +1,6 @@
 package com.devsuperior.dsclient.entities;
 
 import java.io.Serializable;
-import java.time.Instant;
 import java.util.Objects;
 
 import javax.persistence.Entity;
@@ -21,13 +20,13 @@ public class Client implements Serializable  {
 	private String name;
 	private String cpf;
 	private Double income;
-	private Instant birthDate;
+	private Integer birthDate;
 	private Integer children;
 	
 	public Client() {
 	}
 
-	public Client(Long id, String name, String cpf, Double income, Instant birthDate, Integer children) {
+	public Client(Long id, String name, String cpf, Double income, Integer birthDate, Integer children) {
 		this.id = id;
 		this.name = name;
 		this.cpf = cpf;
@@ -68,11 +67,11 @@ public class Client implements Serializable  {
 		this.income = income;
 	}
 
-	public Instant getBirthDate() {
+	public Integer getBirthDate() {
 		return birthDate;
 	}
 
-	public void setBirthDate(Instant birthDate) {
+	public void setBirthDate(Integer birthDate) {
 		this.birthDate = birthDate;
 	}
 
